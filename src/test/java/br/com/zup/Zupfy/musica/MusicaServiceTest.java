@@ -39,6 +39,7 @@ public class MusicaServiceTest {
         Musica musicaSalva = musicaService.cadastrarMusica(musica);
 
         Assertions.assertEquals(LocalDate.now(), musicaSalva.getDataDeCadastro());
+        Assertions.assertEquals(musica.getNome(), musicaSalva.getNome());
     }
 
     @Test
